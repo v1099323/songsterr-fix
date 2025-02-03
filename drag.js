@@ -1,9 +1,8 @@
 let isExecuted = false;
 let currentUrl = window.location.href;
 
-// Функция для отслеживания изменений URL
 const initUrlTracking = () => {
-	// Перехват методов History API
+
 	const originalPushState = history.pushState;
 	const originalReplaceState = history.replaceState;
 
@@ -30,12 +29,12 @@ const handleUrlChange = () => {
 
 const resetActivation = () => {
 	isExecuted = false;
-	// Удаляем старые обработчики
+
 	document
 		.querySelector('#control-play')
 		.removeEventListener('click', handleActivation);
 	document.removeEventListener('keydown', handleKeyPress);
-	// Вешаем новые обработчики
+
 	document
 		.querySelector('#control-play')
 		.addEventListener('click', handleActivation);
@@ -46,7 +45,7 @@ const handleActivation = () => {
 	if (isExecuted) return;
 	isExecuted = true;
 
-	// Удаляем обработчики до следующего изменения URL
+
 	document
 		.querySelector('#control-play')
 		.removeEventListener('click', handleActivation);
@@ -107,7 +106,7 @@ const handleActivation = () => {
 				const viewportHeight = window.innerHeight;
 				const elementWidth = box.offsetWidth;
 
-				// Правильное позиционирование с 15% отступами
+				
 				const initialX = viewportWidth * 1 - elementWidth;
 				const initialY = viewportHeight * 0.85 - 235;
 
@@ -138,7 +137,7 @@ const handleActivation = () => {
 				maxY: window.innerHeight - 235,
 			});
 
-			// Обработчики событий
+			
 			box.addEventListener('mousedown', e => {
 				isDragging = true;
 				const transform = getTranslateValues(box);
@@ -203,10 +202,10 @@ const handleKeyPress = e => {
 	if (e.code === 'Space') handleActivation();
 };
 
-// Инициализация отслеживания URL
+
 initUrlTracking();
 
-// Первоначальная инициализация обработчиков
+
 document
 	.querySelector('#control-play')
 	.addEventListener('click', handleActivation);
