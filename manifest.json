@@ -1,0 +1,17 @@
+{
+	"description": "Songsterr-fix plugin. fix songster panel and youtube popup",
+	"manifest_version": 2,
+	"name": "Songsterr fix",
+	"version": "1.0",
+	"homepage_url": "https://github.com/",
+	"icons": {
+		"48": "icons/border-48.svg"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.songsterr.com/*"],
+			"js": ["songster.js", "drag.js"]
+		}
+	]
+}
