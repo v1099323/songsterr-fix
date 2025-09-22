@@ -8,6 +8,8 @@ var songster = () => {
 		['.Bnc1el', 'display', 'none'],
 		['.C8325s', 'display', 'none'],
 		['.uxw1uw', 'backdrop-filter', 'none'],
+    ['.B3a4ku', 'display', 'none'],
+    ['.vgc1tt', 'display', 'none'],
 	];
 
 	var found = false;
