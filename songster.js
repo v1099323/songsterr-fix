@@ -5,6 +5,9 @@ var songster = () => {
 		['.Cto1rx', 'display', 'none'],
 		['.Cip2pk', 'display', 'none'],
 		['.Cek20l', 'display', 'none'],
+		['.Bnc1el', 'display', 'none'],
+		['.C8325s', 'display', 'none'],
+		['.uxw1uw', 'backdrop-filter', 'none'],
 	];
 
 	var found = false;
